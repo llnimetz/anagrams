@@ -1,0 +1,18 @@
+<div class="container">
+  <h1> Anagrams </h1>
+  <%= @help %>
+  <%= erb(:mypartial, :layout => :admin_layout) %>
+    <% if @anagram_list %>
+    <p> Inputted Word: <%= @word.name %></p>
+      <% if @anagram_list.count > 1 %>
+        <% @anagram_list.each do |word| %>
+        <p><%= word.name %></p>
+        <% end %>
+      <% else %>
+        <p>anagram not found</p>
+      <% end %>
+      <% else %>
+        <p>Word not found in dictionary.</p>
+    <% end %>
+</div>
+ <a href="/race">test link</a>
